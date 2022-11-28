@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zodiak</title>
+</head>
+<body>
+  <h1> Выбери свой знак зодиака:</h1>
+
+  <ul>
+      {% for lan in header %}
+      <li>{{ lan }}</li>
+      {% endfor %}
+
+  </ul>
+  <p>{{message}}</p>
+ <img src="{% static "img/img1.jpg" %}" alt="зимний лес">
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

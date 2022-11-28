@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static "css/styles.css" %}" />
+
+    <title>zodiac</title>
+</head>
+    {% include 'includes/navbar.html' %}
+<body>
+  <h1> Выбери свой знак зодиака:</h1>
+
+  <ul>
+      {% for lan in header %}
+      <li><a href="/{{ lan }}">{{ lan }}</a></li>
+      {% endfor %}
+
+  </ul>
+  <p>{{message}}</p>
+ <img src="{% static "img/img1.jpg" %}" alt="фото">
+
+</body>
+</html>
