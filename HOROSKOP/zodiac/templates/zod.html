@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Гороскоп для: {}</title>
+    <title> Гороскоп для: {{sign_name.sign_name}}</title>
 </head>
+    {% include 'includes/navbar.html' %}
 <body>
-    <h1>привет</h1>
+    <h1>привет {{sign_name.sign_name}} </h1>
+    <h1>привет {{header}} </h1>
 
 </body>
 </html>

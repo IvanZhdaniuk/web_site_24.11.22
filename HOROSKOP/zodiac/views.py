@@ -3,11 +3,8 @@ from django.http import HttpResponse, HttpResponseNotFound
 
 # Blok 1
 
-def home(request):
-    return HttpResponse('<h1>Main Page Horoscop</h1>')
 
-def about(request):
-    return HttpResponse('<h1>Page About</h1>')
+
 
 
 zodiac_dict = {
@@ -43,8 +40,14 @@ def home_page(request):
 
     return render(request, "home_page.html", context=data)
 
-def zod(request):
-    return render(request, "zod.html")
+def zod(request, sign_name):
+    header = sign_name
+
+
+    data = {
+        "header": zodiac_dict.get(sign_name, None)
+    }
+    return render(request, "zod.html", context=data)
 
 
 
