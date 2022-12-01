@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from work_with_bd import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('work_with_bd/', include('work_with_bd.urls')),
-    path('zodiac/', include('zodiac.urls')),
-
+    path("", views.index),
+    path("create/", views.create),
+    path("edit/<int:id>/", views.edit),
+    path("delete/<int:id>/", views.delete),
 ]

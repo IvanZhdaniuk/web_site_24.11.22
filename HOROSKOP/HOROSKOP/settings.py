@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'zodiac',
+    'work_with_bd',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     "/zodiac//static/",
+    "/work_with_bd//static/",
 
 ]
 

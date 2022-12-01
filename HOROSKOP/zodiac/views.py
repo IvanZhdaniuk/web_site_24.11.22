@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound
+from .models import Zodiac
+
+# all_objects=Zodiac.odjects.all()
+# print(all_objects.query)
 
 # Blok 1
 
@@ -48,6 +52,8 @@ def zod(request, sign_name):
         "header": zodiac_dict.get(sign_name, None)
     }
     return render(request, "zod.html", context=data)
+
+
 
 
 
